@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  background: #03031a;
+  color: #fb257725;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.button-shadow {
+  box-shadow: 0 9px 25px rgb(223 39 100 / 80%);
+}
+/* aimation css */
+.hero-animation {
+  animation: mymove 5s infinite;
+  animation-direction: alternate;
+}
+@keyframes mymove {
+  from {
+    top: 150px;
+  }
+  to {
+    bottom: 200px;
+  }
+}
+.blur-round::before {
+  background-image: url(./images/hero-bg-blur.png);
+}
+.feature-shape::before {
+  background-image: url(./images/feature-shape-1.png);
+}
+.bg-primary-blur {
+  background: rgba(255, 255, 255, 0.5);
+}
+.bg-secondary-blur {
+  background: linear-gradient(
+    319.34deg,
+    rgba(251, 37, 118, 0.4) 17.64%,
+    rgba(251, 37, 118, 0) 88.12%
+  );
+  mix-blend-mode: normal;
+  backdrop-filter: blur(20px);
+}
+.card-bg {
+  background: rgba(255, 255, 255, 0.1);
+}
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.swiper-pagination-bullet {
+  background: #ffff !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #fb2576 !important;
+}
+.wave {
+  background-image: url(./images/wave.svg);
+}
+.portfolio-img .portfolio-hover {
+  transform: scale(0.85);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.portfolio-img .portfolio-hover:hover {
+  background: linear-gradient(
+    319.34deg,
+    rgba(251, 37, 118, 0.4) 17.64%,
+    rgba(251, 37, 118, 0) 88.12%
+  );
+  opacity: 1;
+  transform: scale(1);
+}
+/* media start */
+@media screen and (max-width: 1500px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .container {
+    max-width: 992px;
+  }
+  .blur-round::before {
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 900px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 735px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 640px;
+  }
+  .wave {
+    background-image: url(./images/wave.svg);
+    background-size: 0;
+  }
+}
